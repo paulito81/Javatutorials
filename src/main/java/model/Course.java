@@ -1,3 +1,5 @@
+package model;
+
 public class Course {
     private String coursename;
     public String getCoursename() {

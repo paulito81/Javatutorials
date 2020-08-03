@@ -1,4 +1,6 @@
 
+import model.Course;
+
 import java.util.*;
 
 public class CourseCatalog {

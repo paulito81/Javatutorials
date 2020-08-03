@@ -3,12 +3,14 @@
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
          http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
          version="3.1">
+
     <servlet>
-        <servlet-name>SimpleServlet</servlet-name>
-        <servlet-class>com.example.SimpleServlet</servlet-class>
+        <servlet-name>Simple</servlet-name>
+        <servlet-class>org.phasfjo.SimpleServlet</servlet-class>
     </servlet>
+
     <servlet-mapping>
-        <servlet-name>comingsoon</servlet-name>
-        <url-pattern>/*</url-pattern>
+        <servlet-name>Simple</servlet-name>
+        <url-pattern>*.do</url-pattern>
     </servlet-mapping>
 </web-app>
