@@ -2,7 +2,7 @@ package model;
 
 import java.util.Objects;
 
-public final class Person {
+public class Person {
     private final String name;
     private final int age;
 
@@ -19,6 +19,7 @@ public final class Person {
     public String getName(){
         return name;
     }
+
     @Override
     public boolean equals(Object o){
         if( o == null ||  getClass() != o.getClass()) return false;

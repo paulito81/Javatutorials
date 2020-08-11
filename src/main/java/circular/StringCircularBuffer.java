@@ -1,7 +1,7 @@
 package circular;
 
 public class StringCircularBuffer {
-    private String[] buffer;
+    private final String[] buffer;
     private int readCursor = 0;
     private int writeCursor = 0;
 

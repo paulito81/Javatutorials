@@ -14,6 +14,5 @@ public class Course {
         this.coursename = coursename;
     }
     public Course(){
-
     }
 }
