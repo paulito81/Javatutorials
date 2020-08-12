@@ -12,6 +12,7 @@ import persons.PersonReader;
 import refeiables.NonReifiable;
 import refeiables.Reifiable;
 import sort.SortingPersons;
+import sort.StringReverse;
 import varargs.SafeVararg;
 
 import java.io.FileNotFoundException;
@@ -19,7 +20,7 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-      varargs();
+        stringreverse();
     }
 
     private static void runItAll(){
@@ -39,6 +40,7 @@ public class Main {
         lambda();
         personreader();
         intersectiontype();
+        varargs();
     }
 
     private static void jsondemo(){
@@ -157,5 +159,12 @@ public class Main {
     }
     private static void varargs(){
         SafeVararg safeVararg = new SafeVararg();
+    }
+
+    private static void stringreverse(){
+        String testkode = "apekatt";
+        System.out.print(testkode +" blir til.. ");
+        StringReverse reverse = new StringReverse(testkode);
+       // System.out.println(reverse.reverse(testkode));
     }
 }
