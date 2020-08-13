@@ -6,7 +6,7 @@
 
     <servlet>
         <servlet-name>Simple</servlet-name>
-        <servlet-class>org.phasfjo.SimpleServlet</servlet-class>
+        <servlet-class>no.phasfjo.servlets.SimpleServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>

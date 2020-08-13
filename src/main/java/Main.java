@@ -1,58 +1,65 @@
-import collections.*;
-import circular.CircularBuffer;
-import circular.StringCircularBuffer;
-import erasures.InstanceOf;
-import erasures.UncompilableException;
-import injectors.Injector;
-import injectors.Logger;
-import intersectiontype.IntersectionType;
-import lambda.LambdaCode;
-import legacy.LegacyCode;
-import persons.PersonReader;
-import refeiables.NonReifiable;
-import refeiables.Reifiable;
-import sort.SortingPersons;
-import sort.StringReverse;
-import varargs.SafeVararg;
+import no.phasfjo.collections.*;
+import no.phasfjo.circular.CircularBuffer;
+import no.phasfjo.circular.StringCircularBuffer;
+import no.phasfjo.courses.CourseCatalog;
+import no.phasfjo.courses.DevDictionary;
+import no.phasfjo.erasures.InstanceOf;
+import no.phasfjo.erasures.UncompilableException;
+import no.phasfjo.guistuff.JavaGui;
+import no.phasfjo.injectors.Injector;
+import no.phasfjo.injectors.Logger;
+import no.phasfjo.intersectiontype.IntersectionType;
+import no.phasfjo.jsons.Jsondemo;
+import no.phasfjo.lambda.LambdaCode;
+import no.phasfjo.legacy.LegacyCode;
+import no.phasfjo.persons.PersonReader;
+import no.phasfjo.refeiables.NonReifiable;
+import no.phasfjo.refeiables.Reifiable;
+import no.phasfjo.sort.SortingPersons;
+import no.phasfjo.sort.StringReverse;
+import no.phasfjo.varargs.SafeVararg;
 
 import java.io.FileNotFoundException;
 import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        stringreverse();
+        runItAll();
     }
 
     private static void runItAll(){
-        jsondemo();
-        devdictionary();
-        coursecatalog();
+        jsonDemo();
+        devDictionary();
+        courseCatalog();
         sort();
         unsafe();
         safe();
         collections();
         legacy();
         erasureOf();
-        uncompileexception();
-        customarraylist();
+       // uncompileException(); TODO Error crashes Exception in thread "main" java.lang.
+        customArraylist();
         injector();
         refiable();
         lambda();
-        personreader();
-        intersectiontype();
+        personReader();
+        intersectionType();
         varargs();
+        stringReverse();
+        guiStuff();
+
     }
 
-    private static void jsondemo(){
+    private static void jsonDemo(){
         Jsondemo jsondemo = new Jsondemo();
         jsondemo.initialize();
     }
 
-    private static void devdictionary(){
+    private static void devDictionary(){
         DevDictionary devDictionary = new DevDictionary();
         devDictionary.runApp();
     }
-    private static void coursecatalog(){
+    private static void courseCatalog(){
         CourseCatalog courseCatalog = new CourseCatalog();
         courseCatalog.printCoursesByTopic("Java");
     }
@@ -113,11 +120,12 @@ public class Main {
         System.out.println(new InstanceOf<>() instanceof InstanceOf);
     }
 
-    private static void uncompileexception(){
-        new UncompilableException();
+    //TODO Error crashes Exception in thread "main" java.lang.
+    private static void uncompileException(){
+       UncompilableException uncompilableException =  new UncompilableException();
     }
 
-    private static void customarraylist(){
+    private static void customArraylist(){
         List<Integer> arrayList = new CustomArrayList<>();
 
         arrayList.add(0);
@@ -142,14 +150,14 @@ public class Main {
     private static void lambda(){
       new LambdaCode();
     }
-    private static void personreader() {
+    private static void personReader() {
         try {
             new PersonReader();
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
     }
-    private static void intersectiontype(){
+    private static void intersectionType(){
         try {
             new IntersectionType();
         }catch (Exception e){
@@ -160,10 +168,15 @@ public class Main {
          new SafeVararg();
     }
 
-    private static void stringreverse(){
+    private static void stringReverse(){
         String testkode = "apekatt";
         System.out.print(testkode +" blir til.. ");
         StringReverse reverse = new StringReverse(testkode);
         System.out.println(reverse.reverse(testkode));
     }
+
+    private static void guiStuff(){
+        new JavaGui(300, 40, "Title case converter");
+    }
+
 }
