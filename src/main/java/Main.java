@@ -58,7 +58,7 @@ public class Main {
     }
 
     private static void sort(){
-        SortingPersons sortingPersons = new SortingPersons();
+        new SortingPersons();
     }
     private static void unsafe(){
         CircularBuffer<String> circularBuffer = new CircularBuffer<>(10);
@@ -96,14 +96,14 @@ public class Main {
     }
 
     private static void collections(){
-        TheArrayProblem theArrayProblem = new TheArrayProblem();
-        ListPersons listPersons = new ListPersons();
-        SetPersons setPersons = new SetPersons();
-        MapPersons mapPersons = new MapPersons();
+        new TheArrayProblem();
+        new ListPersons();
+        new SetPersons();
+        new MapPersons();
     }
 
     private static void legacy(){
-        LegacyCode legacyCode = new LegacyCode();
+        new LegacyCode();
     }
 
     private static void erasureOf(){
@@ -114,7 +114,7 @@ public class Main {
     }
 
     private static void uncompileexception(){
-        UncompilableException uncompilableException = new UncompilableException();
+        new UncompilableException();
     }
 
     private static void customarraylist(){
@@ -136,35 +136,34 @@ public class Main {
         logger.log();
     }
     private static void refiable(){
-        Reifiable reifiable = new Reifiable();
-        NonReifiable<String> reifiable1 = new NonReifiable<String>();
+        new Reifiable();
+        new NonReifiable<String>();
     }
     private static void lambda(){
-       LambdaCode lambdaCode = new LambdaCode();
-
+      new LambdaCode();
     }
     private static void personreader() {
         try {
-            PersonReader personReader = new PersonReader();
+            new PersonReader();
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
     }
     private static void intersectiontype(){
         try {
-            IntersectionType intersectiontype = new IntersectionType();
+            new IntersectionType();
         }catch (Exception e){
             e.printStackTrace();
         }
     }
     private static void varargs(){
-        SafeVararg safeVararg = new SafeVararg();
+         new SafeVararg();
     }
 
     private static void stringreverse(){
         String testkode = "apekatt";
         System.out.print(testkode +" blir til.. ");
         StringReverse reverse = new StringReverse(testkode);
-       // System.out.println(reverse.reverse(testkode));
+        System.out.println(reverse.reverse(testkode));
     }
 }
