@@ -37,7 +37,7 @@ public class Main {
         collections();
         legacy();
         erasureOf();
-       // uncompileException(); TODO Error crashes Exception in thread "main" java.lang.
+        // uncompileException(); TODO Error crashes Exception in thread "main" java.lang.
         customArraylist();
         injector();
         refiable();
@@ -59,6 +59,7 @@ public class Main {
         DevDictionary devDictionary = new DevDictionary();
         devDictionary.runApp();
     }
+
     private static void courseCatalog(){
         CourseCatalog courseCatalog = new CourseCatalog();
         courseCatalog.printCoursesByTopic("Java");
@@ -67,6 +68,7 @@ public class Main {
     private static void sort(){
         new SortingPersons();
     }
+
     private static void unsafe(){
         CircularBuffer<String> circularBuffer = new CircularBuffer<>(10);
         circularBuffer.offer("a");
@@ -76,6 +78,7 @@ public class Main {
         String value = concatenate(circularBuffer);
         System.out.println(value);
     }
+
     private static void safe(){
         StringCircularBuffer stringCircularBuffer = new StringCircularBuffer(10);
         stringCircularBuffer.offer("a");
@@ -84,6 +87,7 @@ public class Main {
         String value  = concatenate(stringCircularBuffer);
         System.out.println(value);
     }
+
     private static String concatenate(StringCircularBuffer stringCircularBuffer){
         StringBuilder result = new StringBuilder();
         String value;
@@ -123,6 +127,7 @@ public class Main {
     //TODO Error crashes Exception in thread "main" java.lang.
     private static void uncompileException(){
        UncompilableException uncompilableException =  new UncompilableException();
+        System.out.println(uncompilableException);
     }
 
     private static void customArraylist(){
@@ -147,9 +152,11 @@ public class Main {
         new Reifiable();
         new NonReifiable<String>();
     }
+
     private static void lambda(){
       new LambdaCode();
     }
+
     private static void personReader() {
         try {
             new PersonReader();
@@ -164,6 +171,7 @@ public class Main {
             e.printStackTrace();
         }
     }
+
     private static void varargs(){
          new SafeVararg();
     }
